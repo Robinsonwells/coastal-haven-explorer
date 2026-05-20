@@ -28,6 +28,8 @@ const ContactForm = () => {
   return (
     <section ref={ref} id="contact" className="bg-charcoal py-24 md:py-32 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+      <div className="deco-blob h-96 w-96 -bottom-32 -left-20 animate-blob" style={{ opacity: 0.25 }} />
+      <div className="deco-blob h-80 w-80 -top-20 -right-20 animate-blob" style={{ animationDelay: "-8s", opacity: 0.2 }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div
@@ -36,7 +38,7 @@ const ContactForm = () => {
           }`}
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Get In Touch</p>
-          <h2 className="font-display text-4xl md:text-5xl" style={{ color: "hsl(var(--primary-foreground))" }}>
+          <h2 className="font-display text-4xl md:text-5xl animate-text-shimmer">
             Let's Find Your Home
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-accent" />
