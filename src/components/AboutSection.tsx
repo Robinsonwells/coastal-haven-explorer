@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Award, Building2, Briefcase, Map } from "lucide-react";
 import headshot from "@/assets/joe-licari-headshot.jpeg";
+import { useTilt } from "@/hooks/useTilt";
 
 const stats = [
   { icon: Building2, value: "Luxury", label: "Estate Homes" },
