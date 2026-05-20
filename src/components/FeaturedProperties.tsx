@@ -113,7 +113,7 @@ const FeaturedProperties = () => {
 
                 <a
                   href="#contact"
-                  className="mt-5 inline-block font-body text-sm font-semibold text-accent hover:underline"
+                  className="story-link mt-5 inline-block font-body text-sm font-semibold text-accent"
                 >
                   View Listing Details →
                 </a>
