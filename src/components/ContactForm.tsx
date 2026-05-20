@@ -92,7 +92,7 @@ const ContactForm = () => {
             <Input type="tel" placeholder="Phone Number" className="input-glow bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent" />
             <Input type="email" placeholder="Email Address" className="input-glow bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent" required />
             <Textarea placeholder="Tell Joe about the home you're looking for or listing..." rows={4} className="input-glow bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent resize-none" required />
-            <Button type="submit" size="lg" className="w-full group bg-accent hover:bg-accent/90 text-accent-foreground font-display font-bold animate-glow-pulse transition-transform hover:scale-[1.02]">
+            <Button ref={submitRef} type="submit" size="lg" className="w-full group bg-accent hover:bg-accent/90 text-accent-foreground font-display font-bold animate-glow-pulse">
               Send Message
               <Send className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:-rotate-12" />
             </Button>
