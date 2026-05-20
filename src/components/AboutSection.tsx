@@ -13,6 +13,7 @@ const stats = [
 const AboutSection = () => {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const tiltRef = useTilt<HTMLDivElement>(10);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
