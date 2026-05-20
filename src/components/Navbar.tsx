@@ -32,22 +32,23 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
+          {links.map((l, i) => (
             <a
               key={l.label}
               href={l.href}
-              className={`font-body text-sm tracking-wider uppercase transition-colors hover:text-accent ${
+              className={`story-link font-body text-sm tracking-wider uppercase transition-colors hover:text-accent ${
                 scrolled ? "text-foreground/70" : "text-primary-foreground/80"
               }`}
+              style={{ animation: `fadeInScale 0.5s ease-out ${i * 80}ms both` }}
             >
               {l.label}
             </a>
           ))}
           <a
             href="tel:8473441200"
-            className="flex items-center gap-2 rounded-full bg-accent px-5 py-2 font-body text-sm font-semibold text-accent-foreground transition-transform hover:scale-105"
+            className="flex items-center gap-2 rounded-full bg-accent px-5 py-2 font-body text-sm font-semibold text-accent-foreground transition-transform hover:scale-105 animate-glow-pulse"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4 animate-tilt" />
             (847) 344-1200
           </a>
         </div>

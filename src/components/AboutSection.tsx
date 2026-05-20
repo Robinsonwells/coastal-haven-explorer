@@ -23,8 +23,9 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={ref} id="about" className="bg-background py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="about" className="bg-background py-24 md:py-32 relative overflow-hidden">
+      <div className="deco-blob h-80 w-80 top-20 -left-20 animate-blob" />
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div
             className={`text-center mb-12 transition-all duration-700 ${
@@ -32,7 +33,7 @@ const AboutSection = () => {
             }`}
           >
             <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Your Broker</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground">Meet Joe Licari</h2>
+            <h2 className="font-display text-4xl md:text-5xl animate-text-shimmer">Meet Joe Licari</h2>
             <div className="mx-auto mt-6 h-px w-20 bg-accent" />
           </div>
 
@@ -42,11 +43,12 @@ const AboutSection = () => {
                 visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury">
+              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
+                <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/30 via-transparent to-primary/30 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-100" />
                 <img
                   src={headshot}
                   alt="Joe Licari, Managing Broker at Keller Williams Success Realty"
-                  className="h-full w-full object-cover"
+                  className="relative h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105"
                   loading="lazy"
                   width={800}
                   height={800}
@@ -84,12 +86,12 @@ const AboutSection = () => {
                 {stats.map((s, i) => (
                   <div
                     key={i}
-                    className={`glass-card rounded-xl p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-luxury ${
+                    className={`glass-card group rounded-xl p-4 transition-all duration-500 hover:-translate-y-2 hover:shadow-luxury hover:bg-accent/5 ${
                       visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                     }`}
                     style={{ transitionDelay: `${i * 100 + 500}ms` }}
                   >
-                    <s.icon className="h-5 w-5 text-accent mb-2" />
+                    <s.icon className="h-5 w-5 text-accent mb-2 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-125" />
                     <p className="font-display text-lg text-foreground font-bold">{s.value}</p>
                     <p className="font-body text-xs text-muted-foreground">{s.label}</p>
                   </div>
