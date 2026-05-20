@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Facebook, Play, Volume2, VolumeX } from "lucide-react";
+import { Facebook, Play } from "lucide-react";
+import joeSocial from "@/assets/joe-social.jpg";
 
 const VideoSection = () => {
   const [visible, setVisible] = useState(false);
