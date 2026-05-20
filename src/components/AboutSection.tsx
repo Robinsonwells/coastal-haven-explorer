@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Award, Building2, Briefcase, Map } from "lucide-react";
 import headshot from "@/assets/joe-licari-headshot.jpeg";
+import { useTilt } from "@/hooks/useTilt";
 
 const stats = [
   { icon: Building2, value: "Luxury", label: "Estate Homes" },
@@ -12,6 +13,7 @@ const stats = [
 const AboutSection = () => {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const tiltRef = useTilt<HTMLDivElement>(10);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +45,7 @@ const AboutSection = () => {
                 visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
+              <div ref={tiltRef} className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
                 <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/30 via-transparent to-primary/30 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-100" />
                 <img
                   src={headshot}

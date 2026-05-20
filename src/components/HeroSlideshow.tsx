@@ -5,16 +5,35 @@ import home1 from "@/assets/home1.jpg";
 import home2 from "@/assets/home2.jpg";
 import home3 from "@/assets/home3.jpg";
 import home4 from "@/assets/home4.jpg";
+import { useMagnetic } from "@/hooks/useMagnetic";
 
 const images = [home1, home2, home3, home4];
 
 const HeroSlideshow = () => {
   const [current, setCurrent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const signatureRef = useRef<HTMLDivElement | null>(null);
+  const ctaRef = useMagnetic<HTMLAnchorElement>(20);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        raf = 0;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   useEffect(() => {
@@ -58,7 +77,10 @@ const HeroSlideshow = () => {
         <div
           key={i}
           className="absolute inset-0 transition-opacity duration-[1.5s] ease-in-out"
-          style={{ opacity: current === i ? 1 : 0 }}
+          style={{
+            opacity: current === i ? 1 : 0,
+            transform: `translate3d(0, ${scrollY * 0.35}px, 0) scale(${1 + scrollY * 0.0006})`,
+          }}
         >
           <img
             src={img}
@@ -73,7 +95,10 @@ const HeroSlideshow = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/40 to-charcoal/85" />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
+      <div
+        className="relative z-10 flex h-full flex-col items-center justify-center px-4"
+        style={{ transform: `translate3d(0, ${scrollY * -0.15}px, 0)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+      >
         <div
           className={`text-center transition-all duration-1000 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -114,8 +139,9 @@ const HeroSlideshow = () => {
           }`}
         >
           <a
+            ref={ctaRef}
             href="#contact"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-display text-base font-bold text-accent-foreground transition-transform hover:scale-105 shadow-lg"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-display text-base font-bold text-accent-foreground shadow-lg animate-glow-pulse"
           >
             Get Started
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
