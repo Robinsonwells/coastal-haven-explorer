@@ -47,7 +47,7 @@ const VideoSection = () => {
 
           <div className="mt-6 flex flex-col items-center gap-3">
             <p className="text-center font-body text-sm text-muted-foreground">
-              Follow Joe on social media for new listings, market updates, and stories from the field.
+              Convicted for caring too much about his real estate clients. GUILTY as charged!
             </p>
             <a
               href="https://www.facebook.com/profile.php?id=100066644997088"
