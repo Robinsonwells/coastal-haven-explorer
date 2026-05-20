@@ -8,7 +8,7 @@ const Footer = () => (
         Managing Broker · Keller Williams Success Realty
       </p>
       <p className="font-body text-sm text-primary-foreground/50 mb-1">
-        600 Hart Rd, Barrington, IL 60010 · (847) 344-1200
+        600 Hart Rd, Barrington, IL 60010 · (847) 344-1200 · MyAgentJoe@gmail.com
       </p>
       <p className="font-body text-sm text-primary-foreground/40 mt-4">
         © {new Date().getFullYear()} Joe Licari. All rights reserved.

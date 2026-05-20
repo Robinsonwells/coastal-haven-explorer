@@ -50,8 +50,8 @@ const ContactForm = () => {
           >
             {[
               { icon: Phone, label: "Call or Text", value: "(847) 344-1200", href: "tel:8473441200" },
-              { icon: Mail, label: "Office", value: "Keller Williams Success Realty" },
-              { icon: MapPin, label: "Address", value: "600 Hart Rd, Barrington, IL 60010" },
+              { icon: Mail, label: "Email", value: "MyAgentJoe@gmail.com", href: "mailto:MyAgentJoe@gmail.com" },
+              { icon: MapPin, label: "Office", value: "Keller Williams Success Realty · 600 Hart Rd, Barrington, IL 60010" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="rounded-full bg-accent/10 p-3">

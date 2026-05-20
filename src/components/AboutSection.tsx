@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Award, Building2, Briefcase, Map } from "lucide-react";
-import headshot from "@/assets/camron-carpenter-headshot.jpg";
+import headshot from "@/assets/joe-licari-headshot.jpeg";
 
 const stats = [
   { icon: Building2, value: "Luxury", label: "Estate Homes" },
@@ -32,7 +32,7 @@ const AboutSection = () => {
             }`}
           >
             <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Your Broker</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground">About Joe</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-foreground">Meet Joe Licari</h2>
             <div className="mx-auto mt-6 h-px w-20 bg-accent" />
           </div>
 
@@ -60,16 +60,24 @@ const AboutSection = () => {
               }`}
             >
               <p className="font-body text-muted-foreground leading-relaxed text-lg mb-5">
-                Joe Licari is the Managing Broker at Keller Williams Success Realty
-                in Barrington, Illinois, serving buyers and sellers across the
-                Chicago northwest suburbs. He pairs decades of local market expertise
-                with a hands-on, relationship-first approach.
+                Always having a passion for architecture and a desire to meet new people,
+                entering the real estate business was a natural fit. In 1994, I began
+                developing condominiums on Chicago's North Side after graduating with honors
+                from Loyola University. I then formed North Shore Realty Group in 1999, until
+                merging talent with Keller Williams in 2016, where I remain today as a Broker.
+              </p>
+              <p className="font-body text-muted-foreground leading-relaxed text-lg mb-5">
+                Although the market has evolved and I have evolved with it, I've always
+                subscribed to one core philosophy — treat others as you wish to be treated.
+                If you choose to work with me, I'll be there every step of the way, from
+                contract to closing, blending proven technique with modern technology and
+                service second to none.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed text-lg mb-8">
-                Whether you're listing a luxury estate, relocating your family,
-                purchasing your first home, or building an investment portfolio,
-                Joe and the Keller Williams Success team deliver the data,
-                negotiation, and concierge service that move you forward with confidence.
+                Three decades in the Chicagoland market have given me the insight and
+                experience to get the deal done. If you're truly interested in buying or
+                selling and don't want the hard-sell tactics often associated with our
+                industry, I'd be honored to be your agent.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
