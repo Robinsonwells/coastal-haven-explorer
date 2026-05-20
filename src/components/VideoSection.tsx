@@ -33,7 +33,7 @@ const VideoSection = () => {
         </div>
 
         <div
-          className={`mx-auto max-w-4xl transition-all duration-700 delay-200 ${
+          className={`mx-auto max-w-2xl transition-all duration-700 delay-200 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
