@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Facebook, Play } from "lucide-react";
+import { Facebook, Play, Volume2, VolumeX } from "lucide-react";
 
 const VideoSection = () => {
   const [visible, setVisible] = useState(false);
