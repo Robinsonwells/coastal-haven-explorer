@@ -17,9 +17,9 @@ const VideoSection = () => {
   }, []);
 
   return (
-    <section ref={ref} id="video" className="relative overflow-hidden bg-warm-cream py-24 md:py-32">
-      <div className="deco-blob h-80 w-80 -top-20 right-0 animate-blob" />
-      <div className="deco-blob h-72 w-72 -bottom-20 -left-10 animate-blob" style={{ animationDelay: "-7s" }} />
+    <section ref={ref} id="video" className="relative overflow-hidden bg-warm-cream py-12 md:py-16">
+      <div className="deco-blob h-56 w-56 -top-16 right-0 animate-blob" />
+      <div className="deco-blob h-48 w-48 -bottom-12 -left-8 animate-blob" style={{ animationDelay: "-7s" }} />
 
       <div className="container relative mx-auto px-4">
         <div
@@ -28,12 +28,12 @@ const VideoSection = () => {
           }`}
         >
           <p className="mb-3 font-body text-sm uppercase tracking-[0.3em] text-accent">Get To Know Joe</p>
-          <h2 className="font-display text-4xl animate-text-shimmer md:text-5xl">A Personal Welcome</h2>
+          <h2 className="font-display text-3xl animate-text-shimmer md:text-4xl">A Personal Welcome</h2>
           <div className="mx-auto mt-6 h-px w-20 bg-accent" />
         </div>
 
         <div
-          className={`mx-auto max-w-2xl transition-all duration-700 delay-200 ${
+          className={`mx-auto max-w-lg transition-all duration-700 delay-200 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -64,19 +64,19 @@ const VideoSection = () => {
             </button>
           </div>
 
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <p className="text-center font-body text-muted-foreground">
+          <div className="mt-6 flex flex-col items-center gap-3">
+            <p className="text-center font-body text-sm text-muted-foreground">
               Follow Joe on social media for new listings, market updates, and stories from the field.
             </p>
             <a
               href="https://www.facebook.com/profile.php?id=100066644997088"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-display font-bold text-accent-foreground shadow-luxury transition-transform hover:scale-105 animate-glow-pulse"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-display font-bold text-accent-foreground shadow-luxury transition-transform hover:scale-105 animate-glow-pulse"
             >
-              <Facebook className="h-5 w-5 transition-transform duration-300 group-hover:-rotate-12" />
+              <Facebook className="h-4 w-4 transition-transform duration-300 group-hover:-rotate-12" />
               Follow Joe on Facebook
-              <Play className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <Play className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>
