@@ -51,15 +51,16 @@ const FeaturedProperties = () => {
   }, []);
 
   return (
-    <section ref={ref} id="listings" className="bg-background py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="listings" className="bg-background py-24 md:py-32 relative overflow-hidden">
+      <div className="deco-blob h-96 w-96 -top-32 right-0 animate-blob" style={{ animationDelay: "-3s" }} />
+      <div className="container mx-auto px-4 relative">
         <div
           className={`text-center mb-16 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Properties</p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl animate-text-shimmer">
             Featured Listings
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-accent" />
