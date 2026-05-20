@@ -59,7 +59,7 @@ const Testimonials = () => {
           const renderCard = (t: typeof testimonials[number], i: number, animate = true) => (
             <div
               key={i}
-              className={`glass-card h-full rounded-xl p-8 shadow-luxury transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl ${
+              className={`tilt-card glass-card h-full rounded-xl p-8 shadow-luxury transition-all duration-700 hover:shadow-2xl ${
                 animate
                   ? visible
                     ? "opacity-100 translate-y-0"
@@ -68,10 +68,14 @@ const Testimonials = () => {
               }`}
               style={animate ? { transitionDelay: `${i * 150 + 200}ms` } : undefined}
             >
-              <Quote className="h-8 w-8 text-accent/30 mb-4" />
+              <Quote className="h-8 w-8 text-accent/30 mb-4 transition-transform duration-500 group-hover:scale-110" />
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-accent text-accent" />
+                  <Star
+                    key={j}
+                    className="h-4 w-4 fill-accent text-accent"
+                    style={{ animation: `bounceIn 0.6s ease-out ${j * 80 + 300}ms both` }}
+                  />
                 ))}
               </div>
               <p className="font-body text-muted-foreground leading-relaxed mb-6 italic">
