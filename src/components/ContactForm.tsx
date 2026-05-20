@@ -55,14 +55,18 @@ const ContactForm = () => {
               { icon: Mail, label: "Email", value: "MyAgentJoe@gmail.com", href: "mailto:MyAgentJoe@gmail.com" },
               { icon: MapPin, label: "Office", value: "Keller Williams Success Realty · 600 Hart Rd, Barrington, IL 60010" },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div className="rounded-full bg-accent/10 p-3">
+              <div
+                key={i}
+                className="group flex items-start gap-4 transition-transform duration-300 hover:translate-x-1"
+                style={{ animation: visible ? `bounceIn 0.6s ease-out ${i * 120 + 400}ms both` : undefined }}
+              >
+                <div className="rounded-full bg-accent/10 p-3 transition-all duration-500 group-hover:bg-accent/20 group-hover:scale-110 group-hover:rotate-6">
                   <item.icon className="h-5 w-5 text-accent" />
                 </div>
                 <div>
                   <p className="font-body text-xs uppercase tracking-wider text-accent mb-1">{item.label}</p>
                   {item.href ? (
-                    <a href={item.href} className="font-body text-primary-foreground/80 hover:text-accent transition-colors">
+                    <a href={item.href} className="story-link font-body text-primary-foreground/80 hover:text-accent transition-colors">
                       {item.value}
                     </a>
                   ) : (
