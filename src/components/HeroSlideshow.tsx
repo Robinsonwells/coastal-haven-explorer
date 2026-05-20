@@ -139,8 +139,9 @@ const HeroSlideshow = () => {
           }`}
         >
           <a
+            ref={ctaRef}
             href="#contact"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-display text-base font-bold text-accent-foreground transition-transform hover:scale-105 shadow-lg"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-display text-base font-bold text-accent-foreground shadow-lg animate-glow-pulse"
           >
             Get Started
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
