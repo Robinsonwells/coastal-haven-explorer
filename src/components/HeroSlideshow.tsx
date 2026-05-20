@@ -95,7 +95,10 @@ const HeroSlideshow = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/40 to-charcoal/85" />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
+      <div
+        className="relative z-10 flex h-full flex-col items-center justify-center px-4"
+        style={{ transform: `translate3d(0, ${scrollY * -0.15}px, 0)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+      >
         <div
           className={`text-center transition-all duration-1000 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
