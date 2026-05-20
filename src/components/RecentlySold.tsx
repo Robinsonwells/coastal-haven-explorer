@@ -6,10 +6,10 @@ import sold3 from "@/assets/sold3.jpg";
 import sold4 from "@/assets/sold4.jpg";
 
 const sold = [
-  { image: sold1, price: "$4,250,000", type: "Industrial Warehouse", address: "742 W Cabela Way", city: "Lehi, UT 84043", size: "32,400 sf" },
-  { image: sold2, price: "$2,180,000", type: "Professional Office", address: "1208 N Research Pkwy", city: "Sandy, UT 84070", size: "9,650 sf" },
-  { image: sold3, price: "$3,925,000", type: "Retail Investment", address: "455 W Center St", city: "Provo, UT 84601", size: "14,800 sf" },
-  { image: sold4, price: "$2,650,000", type: "Development Land", address: "918 S Frontage Rd", city: "St. George, UT 84770", size: "12.4 acres" },
+  { image: sold1, price: "$1,950,000", type: "Luxury Estate", address: "82 Steeplechase Rd", city: "Barrington Hills, IL", size: "5,800 sf" },
+  { image: sold2, price: "$725,000", type: "Single Family", address: "144 N Hough St", city: "Barrington, IL", size: "2,950 sf" },
+  { image: sold3, price: "$1,180,000", type: "Custom Home", address: "509 Tartan Ln", city: "Inverness, IL", size: "4,420 sf" },
+  { image: sold4, price: "$610,000", type: "Townhome", address: "1208 Surrey Ridge Dr", city: "Lake Zurich, IL", size: "2,180 sf" },
 ];
 
 const RecentlySold = () => {

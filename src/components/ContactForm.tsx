@@ -22,7 +22,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thanks! Camron will be in touch shortly.");
+    toast.success("Thanks! Joe will be in touch shortly.");
   };
 
   return (
@@ -37,7 +37,7 @@ const ContactForm = () => {
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Get In Touch</p>
           <h2 className="font-display text-4xl md:text-5xl" style={{ color: "hsl(var(--primary-foreground))" }}>
-            Let's Find Your Property
+            Let's Find Your Home
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-accent" />
         </div>
@@ -49,9 +49,9 @@ const ContactForm = () => {
             }`}
           >
             {[
-              { icon: Phone, label: "Call or Text", value: "(801) 259-2355", href: "tel:8012592355" },
-              { icon: Mail, label: "Email", value: "camron@wincre.com", href: "mailto:camron@wincre.com" },
-              { icon: MapPin, label: "Brokerage", value: "Windermere Commercial · wincre.com" },
+              { icon: Phone, label: "Call or Text", value: "(847) 344-1200", href: "tel:8473441200" },
+              { icon: Mail, label: "Office", value: "Keller Williams Success Realty" },
+              { icon: MapPin, label: "Address", value: "600 Hart Rd, Barrington, IL 60010" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="rounded-full bg-accent/10 p-3">
@@ -83,7 +83,7 @@ const ContactForm = () => {
             </div>
             <Input type="tel" placeholder="Phone Number" className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent" />
             <Input type="email" placeholder="Email Address" className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent" required />
-            <Textarea placeholder="Tell Camron about the commercial property you're looking for or listing..." rows={4} className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent resize-none" required />
+            <Textarea placeholder="Tell Joe about the home you're looking for or listing..." rows={4} className="bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-accent resize-none" required />
             <Button type="submit" size="lg" className="w-full group bg-accent hover:bg-accent/90 text-accent-foreground font-display font-bold">
               Send Message
               <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

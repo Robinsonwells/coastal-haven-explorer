@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import signatureRaw from "@/assets/camron-carpenter-signature.svg?raw";
+import signatureRaw from "@/assets/joe-licari-signature.svg?raw";
 import home1 from "@/assets/home1.jpg";
 import home2 from "@/assets/home2.jpg";
 import home3 from "@/assets/home3.jpg";
@@ -62,7 +62,7 @@ const HeroSlideshow = () => {
         >
           <img
             src={img}
-            alt={`Featured Utah commercial property ${i + 1}`}
+            alt={`Featured Barrington area property ${i + 1}`}
             className="h-full w-full object-cover animate-ken-burns"
             width={1920}
             height={1080}
@@ -79,7 +79,7 @@ const HeroSlideshow = () => {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h1 className="sr-only">Camron Carpenter</h1>
+          <h1 className="sr-only">Joe Licari</h1>
           {isLoaded && (
             <div
               ref={signatureRef}
@@ -104,7 +104,7 @@ const HeroSlideshow = () => {
             className="font-body text-center text-sm md:text-base uppercase tracking-[0.25em] mt-2"
             style={{ color: "hsla(0, 0%, 100%, 0.85)" }}
           >
-            Industrial · Investment · Office · Land — Utah Commercial Real Estate
+            Luxury Homes · Residential · Investment — Barrington & Chicago's Northwest Suburbs
           </p>
         </div>
 

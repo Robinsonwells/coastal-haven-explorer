@@ -4,21 +4,21 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const testimonials = [
   {
-    name: "Mark Henderson",
-    location: "Industrial Acquisition · Lehi",
-    text: "Camron found us an off-market industrial building that fit our growth plans perfectly. His market knowledge and underwriting saved us six figures at the negotiation table.",
+    name: "The Henderson Family",
+    location: "Home Purchase · Barrington Hills",
+    text: "Joe found us a home that wasn't even on the market yet. His knowledge of Barrington and the surrounding villages is unmatched, and he negotiated a price well under list.",
     rating: 5,
   },
   {
-    name: "Aspen Capital Partners",
-    location: "Investment Sale · Sandy",
-    text: "We've closed multiple investment deals with Camron. He brings real buyers, accurate pricing, and clean execution. He's the first call we make for Utah commercial.",
+    name: "Sarah & Mike Thompson",
+    location: "Luxury Sale · South Barrington",
+    text: "Joe sold our estate in 11 days at full asking. Professional photography, a real marketing plan, and constant communication from listing to close. The Keller Williams Success team is the best in the northwest suburbs.",
     rating: 5,
   },
   {
-    name: "Jenna Lewis, CFO",
-    location: "Office Lease · Salt Lake City",
-    text: "Camron walked us through every option in the market and negotiated a lease structure that gave us the flexibility we needed. True commercial professional.",
+    name: "David Park",
+    location: "Investment Purchase · Lake Zurich",
+    text: "Joe walked me through every comparable property, ran the numbers, and helped me build a rental portfolio I could actually sleep at night with. He's a true managing broker — patient, sharp, and honest.",
     rating: 5,
   },
 ];
