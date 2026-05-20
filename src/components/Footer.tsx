@@ -1,7 +1,31 @@
+const marqueeItems = [
+  "Luxury Homes",
+  "Residential",
+  "Investment",
+  "Barrington",
+  "South Barrington",
+  "Barrington Hills",
+  "Inverness",
+  "Lake Zurich",
+  "Keller Williams Success Realty",
+];
+
 const Footer = () => (
-  <footer className="bg-charcoal border-t border-primary-foreground/10 py-12">
-    <div className="container mx-auto px-4 text-center">
-      <p className="font-display text-2xl font-bold text-primary-foreground/80 mb-2">
+  <footer className="bg-charcoal border-t border-primary-foreground/10">
+    <div className="relative overflow-hidden border-b border-primary-foreground/5 py-5">
+      <div className="flex w-max gap-12 animate-marquee whitespace-nowrap">
+        {[...marqueeItems, ...marqueeItems].map((item, i) => (
+          <span
+            key={i}
+            className="font-display text-lg uppercase tracking-[0.3em] text-primary-foreground/30"
+          >
+            {item} <span className="ml-12 text-accent">◆</span>
+          </span>
+        ))}
+      </div>
+    </div>
+    <div className="container mx-auto px-4 py-12 text-center">
+      <p className="font-display text-2xl font-bold text-primary-foreground/80 mb-2 animate-text-shimmer inline-block">
         Joe Licari
       </p>
       <p className="font-body text-sm text-primary-foreground/50 mb-1">
