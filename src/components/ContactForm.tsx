@@ -9,6 +9,7 @@ import { useMagnetic } from "@/hooks/useMagnetic";
 const ContactForm = () => {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const submitRef = useMagnetic<HTMLButtonElement>(14);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
