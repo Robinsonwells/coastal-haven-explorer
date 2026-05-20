@@ -70,7 +70,7 @@ const FeaturedProperties = () => {
           const renderCard = (p: typeof properties[number], i: number, animate = true) => (
             <article
               key={i}
-              className={`group h-full overflow-hidden rounded-xl bg-card shadow-luxury transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl ${
+              className={`group tilt-card h-full overflow-hidden rounded-xl bg-card shadow-luxury transition-all duration-700 hover:shadow-2xl ${
                 animate
                   ? visible
                     ? "opacity-100 translate-y-0"
@@ -83,12 +83,13 @@ const FeaturedProperties = () => {
                 <img
                   src={p.image}
                   alt={p.address}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-125"
                   loading="lazy"
                   width={1920}
                   height={1080}
                 />
-                <span className="absolute top-4 left-4 rounded-full bg-accent px-3 py-1 font-body text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <span className="absolute top-4 left-4 rounded-full bg-accent px-3 py-1 font-body text-xs font-semibold uppercase tracking-wider text-accent-foreground animate-glow-pulse">
                   {p.status}
                 </span>
               </div>
