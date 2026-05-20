@@ -3,10 +3,10 @@ import { Award, Building2, Briefcase, Map } from "lucide-react";
 import headshot from "@/assets/camron-carpenter-headshot.jpg";
 
 const stats = [
-  { icon: Building2, value: "Industrial", label: "Warehouse & Flex" },
-  { icon: Briefcase, value: "Office", label: "Class A to Flex" },
+  { icon: Building2, value: "Luxury", label: "Estate Homes" },
+  { icon: Briefcase, value: "Residential", label: "Single Family & Condo" },
   { icon: Award, value: "Investment", label: "Income Properties" },
-  { icon: Map, value: "Land", label: "Development Sites" },
+  { icon: Map, value: "Relocation", label: "Northwest Suburbs" },
 ];
 
 const AboutSection = () => {
@@ -32,7 +32,7 @@ const AboutSection = () => {
             }`}
           >
             <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Your Broker</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground">About Camron</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-foreground">About Joe</h2>
             <div className="mx-auto mt-6 h-px w-20 bg-accent" />
           </div>
 
@@ -45,7 +45,7 @@ const AboutSection = () => {
               <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury">
                 <img
                   src={headshot}
-                  alt="Camron Carpenter, Utah Commercial Real Estate Broker"
+                  alt="Joe Licari, Managing Broker at Keller Williams Success Realty"
                   className="h-full w-full object-cover"
                   loading="lazy"
                   width={800}
@@ -60,16 +60,16 @@ const AboutSection = () => {
               }`}
             >
               <p className="font-body text-muted-foreground leading-relaxed text-lg mb-5">
-                Camron Carpenter is a Utah commercial real estate broker with Windermere
-                Commercial, specializing in industrial, investment, office, and land
-                transactions. He brings deep market insight, sharp underwriting, and
-                a relationship-first approach to every deal.
+                Joe Licari is the Managing Broker at Keller Williams Success Realty
+                in Barrington, Illinois, serving buyers and sellers across the
+                Chicago northwest suburbs. He pairs decades of local market expertise
+                with a hands-on, relationship-first approach.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed text-lg mb-8">
-                Whether you're acquiring a warehouse, leasing office space, repositioning
-                an investment asset, or assembling land for development, Camron delivers
-                the data, network, and negotiation expertise to move your business
-                forward with confidence.
+                Whether you're listing a luxury estate, relocating your family,
+                purchasing your first home, or building an investment portfolio,
+                Joe and the Keller Williams Success team deliver the data,
+                negotiation, and concierge service that move you forward with confidence.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
