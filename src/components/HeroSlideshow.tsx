@@ -77,7 +77,10 @@ const HeroSlideshow = () => {
         <div
           key={i}
           className="absolute inset-0 transition-opacity duration-[1.5s] ease-in-out"
-          style={{ opacity: current === i ? 1 : 0 }}
+          style={{
+            opacity: current === i ? 1 : 0,
+            transform: `translate3d(0, ${scrollY * 0.35}px, 0) scale(${1 + scrollY * 0.0006})`,
+          }}
         >
           <img
             src={img}
