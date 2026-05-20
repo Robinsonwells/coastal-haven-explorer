@@ -45,7 +45,7 @@ const AboutSection = () => {
                 visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
+              <div ref={tiltRef} className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
                 <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/30 via-transparent to-primary/30 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-100" />
                 <img
                   src={headshot}
