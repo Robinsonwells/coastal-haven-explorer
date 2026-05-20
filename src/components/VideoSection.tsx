@@ -39,30 +39,12 @@ const VideoSection = () => {
           }`}
         >
           <div className="tilt-card group relative overflow-hidden rounded-2xl shadow-luxury">
-            <video
-              ref={videoRef}
-              src="/joe-licari-video.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="block h-full w-full bg-charcoal"
+            <img
+              src={joeSocial}
+              alt="Joe Licari"
+              className="block h-full w-full object-cover"
             />
             <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
-            <button
-              onClick={() => {
-                if (videoRef.current) {
-                  videoRef.current.muted = !muted;
-                  setMuted(!muted);
-                }
-              }}
-              className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/60 px-4 py-2 font-body text-sm text-white backdrop-blur-sm transition-all hover:bg-black/80 hover:scale-105"
-              aria-label={muted ? "Unmute video" : "Mute video"}
-            >
-              {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-              {muted ? "Unmute" : "Mute"}
-            </button>
           </div>
 
           <div className="mt-6 flex flex-col items-center gap-3">
