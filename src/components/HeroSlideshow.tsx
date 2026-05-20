@@ -12,10 +12,28 @@ const images = [home1, home2, home3, home4];
 const HeroSlideshow = () => {
   const [current, setCurrent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const signatureRef = useRef<HTMLDivElement | null>(null);
+  const ctaRef = useMagnetic<HTMLAnchorElement>(20);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        raf = 0;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   useEffect(() => {
