@@ -86,12 +86,12 @@ const AboutSection = () => {
                 {stats.map((s, i) => (
                   <div
                     key={i}
-                    className={`glass-card rounded-xl p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-luxury ${
+                    className={`glass-card group rounded-xl p-4 transition-all duration-500 hover:-translate-y-2 hover:shadow-luxury hover:bg-accent/5 ${
                       visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                     }`}
                     style={{ transitionDelay: `${i * 100 + 500}ms` }}
                   >
-                    <s.icon className="h-5 w-5 text-accent mb-2" />
+                    <s.icon className="h-5 w-5 text-accent mb-2 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-125" />
                     <p className="font-display text-lg text-foreground font-bold">{s.value}</p>
                     <p className="font-body text-xs text-muted-foreground">{s.label}</p>
                   </div>
