@@ -23,8 +23,9 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={ref} id="about" className="bg-background py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="about" className="bg-background py-24 md:py-32 relative overflow-hidden">
+      <div className="deco-blob h-80 w-80 top-20 -left-20 animate-blob" />
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div
             className={`text-center mb-12 transition-all duration-700 ${
@@ -32,7 +33,7 @@ const AboutSection = () => {
             }`}
           >
             <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Your Broker</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground">Meet Joe Licari</h2>
+            <h2 className="font-display text-4xl md:text-5xl animate-text-shimmer">Meet Joe Licari</h2>
             <div className="mx-auto mt-6 h-px w-20 bg-accent" />
           </div>
 
@@ -42,11 +43,12 @@ const AboutSection = () => {
                 visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury">
+              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-luxury group">
+                <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/30 via-transparent to-primary/30 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-100" />
                 <img
                   src={headshot}
                   alt="Joe Licari, Managing Broker at Keller Williams Success Realty"
-                  className="h-full w-full object-cover"
+                  className="relative h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105"
                   loading="lazy"
                   width={800}
                   height={800}
