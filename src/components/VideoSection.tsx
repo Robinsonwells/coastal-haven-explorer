@@ -4,9 +4,7 @@ import joeSocial from "@/assets/joe-social.jpg";
 
 const VideoSection = () => {
   const [visible, setVisible] = useState(false);
-  const [muted, setMuted] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
