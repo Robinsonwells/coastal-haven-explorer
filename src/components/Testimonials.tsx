@@ -39,15 +39,17 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section ref={ref} id="testimonials" className="bg-warm-cream py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section ref={ref} id="testimonials" className="bg-warm-cream py-24 md:py-32 relative overflow-hidden">
+      <div className="deco-blob h-72 w-72 -top-20 -left-10 animate-blob" />
+      <div className="deco-blob h-80 w-80 bottom-0 right-0 animate-blob" style={{ animationDelay: "-6s" }} />
+      <div className="container mx-auto px-4 relative">
         <div
           className={`text-center mb-16 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-accent mb-3">Testimonials</p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl animate-text-shimmer">
             What Clients Say
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-accent" />
