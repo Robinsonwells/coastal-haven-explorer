@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import Testimonials from "@/components/Testimonials";
 import FeaturedProperties from "@/components/FeaturedProperties";
+import SalesHistory from "@/components/SalesHistory";
 import AboutSection from "@/components/AboutSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -18,10 +19,14 @@ const Index = () => (
     <Testimonials />
     <AboutSection />
     <FeaturedProperties />
+    <SalesHistory />
     <VideoSection />
     <ContactForm />
     <Footer />
   </div>
 );
+
+export default Index;
+
 
 export default Index;
