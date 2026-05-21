@@ -10,8 +10,18 @@ import img6 from "@/assets/bristlecone-6.webp";
 import img7 from "@/assets/bristlecone-7.webp";
 import img8 from "@/assets/bristlecone-8.webp";
 import img9 from "@/assets/bristlecone-9.webp";
+import img10 from "@/assets/bristlecone-10.webp";
+import img11 from "@/assets/bristlecone-11.webp";
+import img12 from "@/assets/bristlecone-12.webp";
+import img13 from "@/assets/bristlecone-13.webp";
+import img14 from "@/assets/bristlecone-14.webp";
+import img15 from "@/assets/bristlecone-15.webp";
+import img16 from "@/assets/bristlecone-16.webp";
+import img17 from "@/assets/bristlecone-17.webp";
+import img18 from "@/assets/bristlecone-18.webp";
+import img19 from "@/assets/bristlecone-19.webp";
 
-const photos = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const photos = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19];
 
 const listing = {
   status: "For Sale",
