@@ -30,8 +30,8 @@ const properties = [
   { image: prop11, status: "Sold", type: "Townhouse", price: "$450,000", detail: "3 Bed · 2 Bath · 2,050 SF", sqft: "2,050", address: "589 Prestwick Ln, Wheeling, IL" },
   { image: prop12, status: "Sold", type: "Single Family", price: "$460,000", detail: "4 Bed · 2 Bath · 1,709 SF", sqft: "1,709", address: "1901 Kingsley Dr, Schaumburg, IL" },
   { image: prop13, status: "Sold", type: "Single Family", price: "$725,000", detail: "5 Bed · 3.5 Bath · 4,276 SF", sqft: "4,276", address: "99 Lee Rd, Northbrook, IL" },
-  { image: prop14, status: "For Sale", type: "Single Family", price: "$425,000", detail: "3 Bed · 2.5 Bath · 2,292 SF", sqft: "2,292", address: "924 Grand Blvd #2, Wauconda, IL" },
   { image: prop14, status: "Sold", type: "Single Family", price: "$425,000", detail: "3 Bed · 2.5 Bath · 2,292 SF", sqft: "2,292", address: "924 Grand Blvd #2, Wauconda, IL" },
+];
 
 
 const FeaturedProperties = () => {
