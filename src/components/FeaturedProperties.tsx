@@ -31,7 +31,8 @@ const properties = [
   { image: prop12, status: "Sold", type: "Single Family", price: "$460,000", detail: "4 Bed · 2 Bath · 1,709 SF", sqft: "1,709", address: "1901 Kingsley Dr, Schaumburg, IL" },
   { image: prop13, status: "Sold", type: "Single Family", price: "$725,000", detail: "5 Bed · 3.5 Bath · 4,276 SF", sqft: "4,276", address: "99 Lee Rd, Northbrook, IL" },
   { image: prop14, status: "For Sale", type: "Single Family", price: "$425,000", detail: "3 Bed · 2.5 Bath · 2,292 SF", sqft: "2,292", address: "924 Grand Blvd #2, Wauconda, IL" },
-];
+  { image: prop14, status: "Sold", type: "Single Family", price: "$425,000", detail: "3 Bed · 2.5 Bath · 2,292 SF", sqft: "2,292", address: "924 Grand Blvd #2, Wauconda, IL" },
+
 
 const FeaturedProperties = () => {
   const [visible, setVisible] = useState(false);
@@ -92,10 +93,17 @@ const FeaturedProperties = () => {
                 </span>
               </div>
               <div className="p-5">
-                <p className="font-display text-2xl font-bold text-foreground">{p.price}</p>
-                <p className="font-body text-xs text-muted-foreground mb-4">{p.detail}</p>
+                <p className="flex items-start gap-2 font-display text-lg md:text-xl font-semibold leading-snug text-foreground">
+                  <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
+                  <span>{p.address}</span>
+                </p>
 
-                <div className="flex items-center gap-4 mb-4 text-foreground/80">
+                <div className="mt-4 flex items-baseline justify-between border-t border-border pt-4">
+                  <p className="font-display text-2xl font-bold text-foreground">{p.price}</p>
+                  <p className="font-body text-xs text-muted-foreground">{p.detail}</p>
+                </div>
+
+                <div className="flex items-center gap-4 mt-3 text-foreground/80">
                   <span className="flex items-center gap-1 font-body text-sm">
                     <Tag className="h-4 w-4 text-accent" /> <strong>{p.type}</strong>
                   </span>
@@ -103,18 +111,6 @@ const FeaturedProperties = () => {
                     <Maximize className="h-4 w-4 text-accent" /> <strong>{p.sqft}</strong> sf
                   </span>
                 </div>
-
-                <p className="flex items-start gap-2 font-body text-sm text-muted-foreground border-t border-border pt-4">
-                  <MapPin className="h-4 w-4 text-accent mt-0.5 shrink-0" />
-                  {p.address}
-                </p>
-
-                <a
-                  href="#contact"
-                  className="story-link mt-5 inline-block font-body text-sm font-semibold text-accent"
-                >
-                  Inquire About This Property →
-                </a>
               </div>
             </article>
           );
