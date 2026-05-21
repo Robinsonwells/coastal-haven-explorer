@@ -3,7 +3,7 @@ import { Maximize, MapPin, Tag } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import prop1 from "@/assets/prop1.jpg";
 import prop3 from "@/assets/prop3.webp";
-import prop4 from "@/assets/prop4.jpg";
+
 import prop5 from "@/assets/prop5.jpg";
 import prop7 from "@/assets/prop7.jpg";
 import prop8 from "@/assets/prop8.webp";
@@ -11,7 +11,6 @@ import prop8 from "@/assets/prop8.webp";
 const properties = [
   { image: prop1, status: "For Sale", type: "Condo", price: "$169,900", detail: "1 Bed · 1 Bath · 800 SF", sqft: "800", address: "2419 E Olive St #1G, Arlington Heights, IL" },
   { image: prop3, status: "Pending", type: "Single Family", price: "$412,500", detail: "3 Bed · 2 Bath · 1,064 SF", sqft: "1,064", address: "1719 Ferndale Ave, Northbrook, IL" },
-  { image: prop4, status: "Leased", type: "Townhome", price: "$3,000/mo", detail: "3 Bed · 3.5 Bath · 2,338 SF", sqft: "2,338", address: "385 White Oak Ln, Barrington, IL" },
   { image: prop5, status: "For Rent", type: "Condo", price: "$1,625/mo", detail: "2 Bed · 1.5 Bath · 894 SF", sqft: "894", address: "915 Westmoreland Dr #9, Vernon Hills, IL" },
   { image: prop7, status: "For Rent", type: "Townhome", price: "$2,400/mo", detail: "2 Bed · 2 Bath · 1,081 SF", sqft: "1,081", address: "135 Morningside Ln, Buffalo Grove, IL" },
   { image: prop8, status: "For Sale", type: "Condo", price: "$250,000", detail: "3 Bed · 2 Bath · 1,500 SF", sqft: "1,500", address: "480 E Montrose Ave #203, Wood Dale, IL" },
